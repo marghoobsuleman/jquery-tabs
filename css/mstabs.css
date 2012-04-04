@@ -1,0 +1,20 @@
+body{font-size:12px; font-family:Arial, Helvetica, sans-serif}
+.tabsPanel{padding:5px 10px;}
+.tabsCntents{padding:5px 10px; border:1px solid #c3c3c3;}
+.tabholder{list-style-type:none; margin:0; padding:0;}
+.tabholder li{display:inline; border:1px solid #c3c3c3;border-bottom:0 none; padding:5px 10px; -moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; background:#f2f2f2; cursor:pointer; position:relative;top:1px;}
+.tabholder li.active{background:#fff; position:relative; top:1px; border-bottom:1px solid #fff;}
+
+.tabholder a, .tabholder a:visited{display:inline-block; border:1px solid #c3c3c3;border-bottom:0 none; padding:5px 10px; -moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; background:#f2f2f2; cursor:pointer; position:relative;top:1px; text-decoration:none; color:#000}
+.tabholder a.active{background:#fff; position:relative; top:1px; border-bottom:1px solid #fff;}
+
+.bottomTabs li{border:1px solid #c3c3c3;border-top:0 none; padding:5px 10px; -moz-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; background:#f2f2f2; cursor:pointer; position:relative; top:0}
+.bottomTabs li.active{position:relative; top:-1px; border-bottom:1px solid #c3c3c3;border-top:1px solid #fff;}
+
+.leftTabs {display:block}
+.leftTabs li{border:1px solid #c3c3c3; padding:5px 10px; -moz-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; background:#f2f2f2; cursor:pointer; position:relative; display:block; margin:5px 0; left:1px}
+.leftTabs li.active{position:relative; left:1px; border-right:1px solid #fff; background:#fff}
+
+.rightTabs {display:block; margin:0; padding:0;}
+.rightTabs li{border:1px solid #c3c3c3; padding:5px 10px; -moz-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0; background:#f2f2f2; cursor:pointer; position:relative; display:block; margin:5px 0;left:1px;}
+.rightTabs li.active{position:relative; border-left:1px solid #fff; background:#fff}

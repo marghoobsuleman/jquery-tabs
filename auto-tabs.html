@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery msTabs</title>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mstabs-min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/mstabs.css" />
+<style>
+.tabsCntents{width:700px}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+.mstoplinks{padding:3px; border-bottom:2px solid #c3c3c3; margin:0 0 20px 0;}
+.mstoplinks a, .mstoplinks a:visited{color:#003366; text-decoration:none; border-right:1px solid #c3c3c3; padding:0 10px}
+.mstoplinks a.active, .mstoplinks a.active:visited{color:#003366; text-decoration:none; border-right:1px solid #c3c3c3; padding:0 10px;border-bottom:1px solid #c3c3c3; border-left:1px solid #c3c3c3; }
+.version{font-size:12px; color:#EE3C95;}
+</style>
+</head>
+
+<body>
+<div style="clear:both" class="mstoplinks">
+<p><a href="index.html">Normal</a> &nbsp;<a href="ajax-example.html">Ajax Example</a>&nbsp;<a href="auto-tabs.html" class="active">Auto Tabs</a>&nbsp;<a href="more-examples.html">More Examples</a>&nbsp;<a href="docs.html">Docs</a></p>
+</div>
+<h1>Auto Tabs <sup id="ver" class="version"></sup></h1>
+<div class="tabsPanel">
+	<ul class="tabholder">
+    	<li id="cms">CMS Systems</li>
+        <li id="interactive">Interactive Presentations</li>
+        <li id="ecommerce">Ecommerce Solutions</li>
+        <li id="ajax">Ajax</li>
+        <li id="web2">Web 2.0</li>
+        <li id="flash">Flash Design</li>
+    </ul>
+</div>
+<div class="tabsCntents">
+	<div id="cms_content">
+    	<img src="images/menu-img-1.jpg" />	
+    </div>
+    <div id="interactive_content">
+    	<img src="images/menu-img-2.jpg" />	
+    </div>
+    <div id="ecommerce_content">
+    	<img src="images/menu-img-3.jpg" />	
+    </div>
+    <div id="ajax_content">
+    	<img src="images/menu-img-4.jpg" />	
+    </div>
+    <div id="web2_content">
+    	<img src="images/menu-img-5.jpg" />	
+    </div>
+        <div id="flash_content">
+    	<img src="images/menu-img-6.jpg" />	
+    </div>
+</div>
+
+<script type="text/javascript">
+var oTabs = $(".tabholder").msTabs({tabs:'li', effects:'fade', speed:'fast', selected:'active', auto:3000}).data("msTabs");
+//no use
+$("#ver").html("v"+oTabs.getVersion());
+
+</script>
+</body>
+</html>

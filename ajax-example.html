@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery msTabs</title>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mstabs-min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/mstabs.css" />
+<style>
+.tabsCntents{width:700px}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+.mstoplinks{padding:3px; border-bottom:2px solid #c3c3c3; margin:0 0 20px 0;}
+.mstoplinks a, .mstoplinks a:visited{color:#003366; text-decoration:none; border-right:1px solid #c3c3c3; padding:0 10px}
+.mstoplinks a.active, .mstoplinks a.active:visited{color:#003366; text-decoration:none; border-right:1px solid #c3c3c3; padding:0 10px;border-bottom:1px solid #c3c3c3; border-left:1px solid #c3c3c3; }
+.version{font-size:12px; color:#EE3C95;}
+</style>
+</head>
+
+<body>
+<div style="clear:both" class="mstoplinks">
+<p><a href="index.html">Normal</a> &nbsp;<a href="ajax-example.html" class="active">Ajax Example</a>&nbsp;<a href="auto-tabs.html">Auto Tabs</a>&nbsp;<a href="more-examples.html">More Examples</a>&nbsp;<a href="docs.html">Docs</a></p>
+</div>
+<h1>Ajax Tabs <sup id="ver" class="version"></sup></h1>
+<div class="tabsPanel tabholder">
+    	<a id="cms" href="ajax-cms.html" class="active ignoreDynamic">CMS Systems</a>
+        <a id="interactive" href="ajax-interactive.html">Interactive Presentations</a>
+        <a id="notExist" href="notexist.html">Bad URL</a>
+        <a id="ajax" href="ajax-ajax.html">Ajax</a>
+        <a id="web2" href="ajax-web2o.html">Web 2.0</a>
+        <a id="flash" href="ajax-flash-design.html">Flash Design</a>
+</div>
+<div class="tabsCntents">
+	<div id="cms_content">
+    	<p>The main features of Content Management Systems depend on the type of the system itself; often, some systems will highlight and/ or offer one or two features only, while other systems are “open-net” systems which attempt to offer all features with some features more predominantly marketed and developed – thereby making them more user-friendly and effective – than others.</p>
+
+	<p>The following is a partial list of popular CMS features:</p>
+
+    <strong>Allow for a large number of people to share and contribute to stored data;</strong>
+    <ul>
+    <li>Control access to data based on user role (i.e., define information users or user groups can view, edit, publish, etc.);</li>
+    <li>Facilitate storage and retrieval of data;</li>
+    <li>Control data validity and compliance;</li>
+    <li>Reduce duplicate inputs;</li>
+    <li>Simplify report writing;</li>
+    <li>Improve communication among users.</li>
+    <li>Define data as almost anything: documents, movies, texts, pictures, phone numbers, articles etc.</li>
+	</ul>
+	<a href="http://en.wikipedia.org/wiki/Content_management_system" target="_blank">Source: Wiki</a>
+    </div>
+    <div id="interactive_content"></div>
+    <div id="ajax_content"></div>
+    <div id="web2_content"></div>
+    <div id="flash_content"></div>
+    <div id="notExist_content"></div>
+</div>
+
+<script type="text/javascript">
+var oTabs = $(".tabholder").msTabs({tabs:'a', effects:'fade', speed:'fast', selected:'active', dynamic:true}).data("msTabs");
+//no use
+$("#ver").html("v"+oTabs.getVersion());
+
+</script>
+</body>
+</html>
