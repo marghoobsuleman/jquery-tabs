@@ -7,6 +7,8 @@
 // Features/public methods: next, previous, auto, getTitle, switchTabByCounter and more...
 // example: var oTabs = $("#mainTabHolder").msTabs({tabs:'.tabclass', defaultTab:1, effects:'slide', speed:'slow', selected:'selected', toggle:false, callback:callbackmethod}).data("msTabs");
 //
+// msTabs is free jQuery Plugin: you can redistribute it and/or modify
+// it under the terms of the either the MIT License or the Gnu General Public License (GPL) Version 2
 ;(function($){
 		   var msMyTabs = function(element, opt) {
 			var settings = $.extend({
